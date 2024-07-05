@@ -54,7 +54,7 @@
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link">Services</a>
                             <a href="event.html" class="nav-item nav-link">Events</a>
-                            <a href="menu.html" class="nav-item nav-link">Menu</a>
+                            <!-- <a href="menu.html" class="nav-item nav-link">Menu</a> -->
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu bg-light">
@@ -119,74 +119,81 @@
                     </div>
                     <div class="col-10">
                         <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                        <form method="POST" action="insert_order.php">
                             <div class="text-center">
                                 <small class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Book Us</small>
                                 <h1 class="display-5 mb-5">Where you want Our Services</h1>
                             </div>
                             <div class="row g-4 form">
                                 <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Country</option>
-                                        <option value="1">USA</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
+                                    <input type="text" id="fname" name="fname" class="form-control border-primary p-2" placeholder="First Name">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" id="lname" name="lname" class="form-control border-primary p-2" placeholder="Last Name">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" id="cn" name="cn" class="form-control border-primary p-2" placeholder="Company Name">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" id="houseadd" name="houseadd" class="form-control border-primary p-2" placeholder="Address">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <input type="text" id="city" name="city" class="form-control border-primary p-2" placeholder="Town City">
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <select class="form-select border-primary p-2" id="state" name="state" required aria-label="Default select example">
+                                      <option value="select">Select a state...</option>
+                                      <option value="AP">Andhra Pradesh</option>
+                                      <option value="AR">Arunachal Pradesh</option>
+                                      <option value="AS">Assam</option>
+                                      <option value="BR">Bihar</option>
+                                      <option value="CT">Chhattisgarh</option>
+                                      <option value="GA">Goa</option>
+                                      <option value="GJ">Gujarat</option>
+                                      <option value="HR">Haryana</option>
+                                      <option value="HP">Himachal Pradesh</option>
+                                      <option value="JK">Jammu and Kashmir</option>
+                                      <option value="JH">Jharkhand</option>
+                                      <option value="KA">Karnataka</option>
+                                      <option value="KL">Kerala</option>
+                                      <option value="MP">Madhya Pradesh</option>
+                                      <option value="MH">Maharashtra</option>
+                                      <option value="MN">Manipur</option>
+                                      <option value="ML">Meghalaya</option>
+                                      <option value="MZ">Mizoram</option>
+                                      <option value="NL">Nagaland</option>
+                                      <option value="OR">Odisha</option>
+                                      <option value="PB">Punjab</option>
+                                      <option value="RJ">Rajasthan</option>
+                                      <option value="SK">Sikkim</option>
+                                      <option value="TN">Tamil Nadu</option>
+                                      <option value="TG">Telangana</option>
+                                      <option value="TR">Tripura</option>
+                                      <option value="UP">Uttar Pradesh</option>
+                                      <option value="UT">Uttarakhand</option>
+                                      <option value="WB">West Bengal</option>
+                                      <option value="AN">Andaman and Nicobar Islands</option>
+                                      <option value="CH">Chandigarh</option>
+                                      <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+                                      <option value="LD">Lakshadweep</option>
+                                      <option value="DL">Delhi</option>
+                                      <option value="PY">Puducherry</option>
                                     </select>
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select City</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
+                                    <input type="text" id="postcode" name="postcode" required class="form-control border-primary p-2" placeholder="Postcode / ZIP">
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Select Palace</option>
-                                        <option value="1">Depend On Country</option>
-                                        <option value="2">UK</option>
-                                        <option value="3">India</option>
-                                    </select>
+                                    <input type="text" id="phone" name="phone" required class="form-control border-primary p-2" placeholder="Your Contact No.">
                                 </div>
                                 <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Small Event</option>
-                                        <option value="1">Event Type</option>
-                                        <option value="2">Big Event</option>
-                                        <option value="3">Small Event</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>No. Of Palace</option>
-                                        <option value="1">100-200</option>
-                                        <option value="2">300-400</option>
-                                        <option value="3">500-600</option>
-                                        <option value="4">700-800</option>
-                                        <option value="5">900-1000</option>
-                                        <option value="6">1000+</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <select class="form-select border-primary p-2" aria-label="Default select example">
-                                        <option selected>Vegetarian</option>
-                                        <option value="1">Vegetarian</option>
-                                        <option value="2">Non Vegetarian</option>
-                                    </select>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="mobile" class="form-control border-primary p-2" placeholder="Your Contact No.">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="date" class="form-control border-primary p-2" placeholder="Select Date">
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <input type="email" class="form-control border-primary p-2" placeholder="Enter Your Email">
+                                    <input type="email" id="email" name="email" required class="form-control border-primary p-2" placeholder="Enter Your Email">
                                 </div>
                                 <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Submit Now</button>
+                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Book Appointment</button>
                                 </div>
-                            </div>
+                              </div>
+                            </form>
                         </div>
                     </div>
                     <div class="col-1">
@@ -204,7 +211,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-item">
-                            <h1 class="text-primary">Cater<span class="text-dark">Serv</span></h1>
+                            <h1 class="text-primary">Parampara<span class="text-dark"><br>Exhibition</span></h1>
                             <p class="lh-lg mb-4">There cursus massa at urnaaculis estieSed aliquamellus vitae ultrs condmentum leo massamollis its estiegittis miristum.</p>
                             <div class="footer-icon d-flex">
                                 <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
@@ -214,24 +221,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" >
                         <div class="footer-item">
                             <h4 class="mb-4">Special Facilities</h4>
                             <div class="d-flex flex-column align-items-start">
-                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Cheese Burger</a>
-                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Sandwich</a>
-                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Panner Burger</a>
-                                <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Special Sweets</a>
-                            </div>
+                              <a class="text-body mb-3" ><i class="fa fa-check text-primary me-2"></i>Seamless Solutions</a>
+                              <a class="text-body mb-3" ><i class="fa fa-check text-primary me-2"></i>Unmatched Execution</a>
+                              <a class="text-body mb-3" ><i class="fa fa-check text-primary me-2"></i>Innovative Concepts</a>
+                              <a class="text-body mb-3" ><i class="fa fa-check text-primary me-2"></i>Customer Support</a>
+                          </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6" >
                         <div class="footer-item">
                             <h4 class="mb-4">Contact Us</h4>
                             <div class="d-flex flex-column align-items-start">
-                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> 123 Street, New York, USA</p>
-                                <p><i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456 7890 123</p>
-                                <p><i class="fas fa-envelope text-primary me-2"></i> info@example.com</p>
+                                <p><i class="fa fa-map-marker-alt text-primary me-2"></i> C- 702,
+                                    Titanium city centre, Satellite,
+                                    Ahmedabad - 380051</p>
+                                <p><i class="fa fa-phone-alt text-primary me-2"></i> +91 98250 63046</p>
+                                <p><i class="fas fa-envelope text-primary me-2"></i> parmpara369@gmail.com</p>
                                 <p><i class="fa fa-clock text-primary me-2"></i> 26/7 Hours Service</p>
                             </div>
                         </div>
@@ -241,22 +250,22 @@
                             <h4 class="mb-4">Social Gallery</h4>
                             <div class="row g-2">
                                 <div class="col-4">
-                                     <img src="img/menu-01.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                     <img src="img/4.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
                                 </div>
                                 <div class="col-4">
-                                     <img src="img/menu-02.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                     <img src="img/5.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
                                 </div>
                                 <div class="col-4">
-                                     <img src="img/menu-03.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                     <img src="img/6.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
                                 </div>
                                 <div class="col-4">
-                                     <img src="img/menu-04.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                     <img src="img/7.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
                                 </div>
                                 <div class="col-4">
-                                     <img src="img/menu-05.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                     <img src="img/1.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
                                 </div>
                                 <div class="col-4">
-                                     <img src="img/menu-06.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
+                                     <img src="img/2.jpg" class="img-fluid rounded-circle border border-primary p-2" alt="">
                                 </div>
                             </div>
                         </div>
