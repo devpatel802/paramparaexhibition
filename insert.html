@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Styled Form with Multiple File Upload</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #495057;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="form-container col-md-6">
+            <h2 class="mb-4 text-center">Styled Form with Multiple File Upload</h2>
+            <form action="inserts.php" method="POST" enctype="multipart/form-data">
+                <!-- Text Box -->
+                <div class="mb-3">
+                    <label for="textInput" class="form-label">Text Box</label>
+                    <input type="text" class="form-control" id="textInput" name="text_input" placeholder="Enter text here" required>
+                </div>
+
+                <!-- Paragraph -->
+                <div class="mb-3">
+                    <label for="paragraphInput" class="form-label">Paragraph</label>
+                    <textarea class="form-control" id="paragraphInput" name="paragraph_input" rows="4" placeholder="Enter paragraph here" required></textarea>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="mb-3">
+                    <label for="imageUpload" class="form-label">Upload Images</label>
+                    <input class="form-control" type="file" id="imageUpload" name="image_upload[]" multiple required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
