@@ -19,31 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
-
-        
-        $to = "devrpatel0201@gmail.com"; 
-        $subject = "Your Appointment Booked";
-        $message = "Dear $fname $lname,\n\n"
-                   . "Thank you for booking an appointment with us. We have received your details:\n\n"
-                   . "Company: $cn\n"
-                   . "Address: $houseadd\n"
-                   . "City: $city\n"
-                   . "State: $state\n"
-                   . "Postcode: $postcode\n"
-                   . "Phone: $phone\n\n"
-                   . "We will contact you soon to confirm your appointment.\n\n"
-                   . "Best regards,\n"
-                   . "Your Company Name"; 
-
-        $headers = "From: email"; 
-
-        // Send email
-        if (mail($to, $subject, $message, $headers)) {
-            echo "<br>Email notification sent.";
-        } else {
-            echo "<br>Error sending email.";
-        }
-
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
